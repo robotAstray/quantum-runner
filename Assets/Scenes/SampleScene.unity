@@ -907,12 +907,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 16
   sideSpeed: 10
-  freezePeriod: 3
+  freezePeriod: 2
   bounceMult: 0
   minInterval: 0.2
   maxInterval: 3
-  obstacleChance: 0.3
-  coinChance: 0.6
+  obstacleChance: 0.6
+  coinChance: 0.15
   minWallLength: 5
   maxWallLength: 20
   minWallWidth: 2
