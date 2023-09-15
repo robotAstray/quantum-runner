@@ -1,4 +1,12 @@
-Library/*
-Logs/*
-Packages/*
+.idea
+Library
+Logs
+obj
+Packages
+ProjectSettings
+UserSettings
 *.meta
+*.sln
+
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
