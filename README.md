@@ -22,9 +22,8 @@ Your goal is to collect as many coin as possible, the more runners you have the 
 
 - **Quantum Tunneling:** The game enables players to enter a quantum superposition state through quantum tunneling. Each time the character encounters a tunneling barrier, it creates a new copy of itself on the other side of the barrier. The original character and its copies exist in a coherent superposition until a quantum collapse occurs.
   
-- **Multiple Runners**: After 3 splits we should have 4 runnersyou (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
-  
-- **Resource Management**:  [what can we say here?]
+- **Multiple Runners**: After 3 splits we should have 4 runners (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
+
   
 - **Collapse Sites**: Collapse Sites are special locations that disrupt the quantum superpositions. When a single runner reaches this site, all other runners vanish, taking with them the coins and resources they've gathered. Keep an eye out for Collapse Sites and aim to send your most prosperous runner to maximize your gains!
   
