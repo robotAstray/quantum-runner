@@ -116,6 +116,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CollapseRunner(int id)
+    {
+        foreach (var key in runnerDict.Keys)
+        {
+            if (key != id) DestroyRunner(key);
+        }
+    }
+
     public void FuseRunner(int id1, int id2)
     {
         // since this method will be called from both runners (since both runners collide with each other) we have to

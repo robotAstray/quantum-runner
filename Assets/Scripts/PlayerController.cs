@@ -107,6 +107,10 @@ public class PlayerController : MonoBehaviour
             _score += 1;
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.CompareTag("CollapseSite"))
+        {
+            GameManager.Instance.CollapseRunner(_id);
+        }
         else if (collision.gameObject.CompareTag("Player"))
         {
             var pc = collision.gameObject.GetComponent<PlayerController>();
@@ -135,7 +139,6 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        print("Die");
         GameManager.Instance.DestroyRunner(_id);
     }
 
