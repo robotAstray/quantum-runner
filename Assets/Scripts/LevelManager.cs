@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    [SerializeField] private float spawnWidth = 1;
     // all the game objects that can be spawned and their properties
     [SerializeField] private List<GameObject> objects;
     [SerializeField] private List<Vector2> widths;
@@ -40,13 +41,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<float> weights;   
 
     private float timer = 0f;   // for periodic instantiation
-    private float planeWidth = 0f;
 
     private void Start()
     {
-        // maybe don't use full width so nothing spawns directly at the border?
-        planeWidth = 50;     // todo fix magic number
-
         if (objects.Count != widths.Count || objects.Count != lengths.Count || objects.Count != weights.Count)
         {
             print("Parameter lists have different sizes!");
@@ -81,7 +78,7 @@ public class LevelManager : MonoBehaviour
             var objLength = Random.Range(lengths[index].x, lengths[index].y);
             
             // spawn it randomly on the provided plane
-            var posX = Random.Range(-planeWidth / 2, planeWidth / 2);
+            var posX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
             // place it forward so not its middle but its end is at spawn position (to avoid spawning things into each other)
             var pos = transform.position + Vector3.right * posX + Vector3.forward * objLength / 2;
 
