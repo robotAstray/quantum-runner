@@ -111,8 +111,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            var pc = collision.gameObject.GetComponent<PlayerController>();
-            GameManager.Instance.FuseRunner(_id, pc.GetId());
+            //var pc = collision.gameObject.GetComponent<PlayerController>();
+            //GameManager.Instance.FuseRunner(_id, pc.GetId());
         }
     }
 
