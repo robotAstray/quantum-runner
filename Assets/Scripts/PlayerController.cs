@@ -100,10 +100,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
+            collision.gameObject.GetComponentInParent<AudioSource>().Play();
             Die();
         }
         else if (collision.gameObject.CompareTag("Coin"))
         {
+            collision.gameObject.GetComponentInParent<AudioSource>().Play();
             PickedUpCoin();
             Destroy(collision.gameObject);
         }
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("CollapseSite"))
         {
+            other.gameObject.GetComponentInParent<AudioSource>().Play();
             GameManager.Instance.CollapseRunner(_id);
         }
     }
@@ -130,7 +133,8 @@ public class PlayerController : MonoBehaviour
 
     private void Tunnel(Vector3 offset)
     {
-        GameManager.Instance.SpawnRunner(transform.position + offset);
+        var runner = GameManager.Instance.SpawnRunner(transform.position + offset);
+        runner.GetComponentInParent<AudioSource>().Play();
     }
 
     private void Bounce(Vector3 offset)
