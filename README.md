@@ -13,8 +13,6 @@ Tunne bounce is based on the concept of quantum tunnelling and it offer a distin
 
 **Tunneling Outcome:** Your character tunnels through the obstacle and reappears on the other side.
 
-**Tunneling Path:** Your character bounces off the obstacle, changing direction.
-
 Your goal is to collect as many coin as possible, the more runners you have the more coins you can collect and the harser it is for them to avoid obstacles.
 
 ## Key Features
