@@ -98,8 +98,7 @@ public class LevelManager : MonoBehaviour
             
         // spawn it randomly on the provided plane
         var posX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
-        // place it forward so not its middle but its end is at spawn position (to avoid spawning things into each other)
-        var pos = transform.position + Vector3.right * posX + Vector3.forward * objLength / 2;
+        var pos = transform.position + Vector3.right * posX;
 
         var obj = Instantiate(objects[index], pos, Quaternion.identity);
         obj.transform.localScale = new(objWidth, 1, objLength);
