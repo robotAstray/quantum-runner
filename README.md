@@ -30,7 +30,7 @@ Your goal is to collect as many coin as possible, the more runners you have the 
   
 - **Runner Elimination:** Runners face two critical conditions that can lead to their elimination. The first is collision with the cylindrical red barriers that populate the game world. Colliding with these obstacles can be fatal, so keen spatial awareness and precise timing are essential for survival. The second condition for elimination is not reaching the Collapse Site first when it appears. In this quantum adventure, only the leading runner and their collected coins and resources are spared when the Collapse Site activates.
   
-- **Tunnel Bounce Universe**: The Tunnel Bounce world conceptually looks like a cylinder, where distinct lanes are regions. You can pick up keys to change lane.
+<!--- **Tunnel Bounce Universe**: The Tunnel Bounce world conceptually looks like a cylinder, where distinct lanes are regions. You can pick up keys to change lane. -->
   
 - **Control Method**: All runners are controlled using a single left and a single right key, keeping the gameplay easily accessible.
 
