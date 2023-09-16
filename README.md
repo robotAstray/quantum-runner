@@ -34,7 +34,7 @@ Your goal is to collect as many coin as possible, the more runners you have the 
 
 ## Gameplay Startegy
 
-- Your goal is to ?? after tunneling through many barriers.
+- The goal is to collect as many coins as possible and make them count. Remember, a collapse destroys all runners except one, and only the coins belonging to that particular runner are saved. Therefore, try to hit collapse sites with rich runners frequently to avoid losses.
 
 - Manage your runners efficiently to gather resources and coins, do not let them fall of of the Tunneling Bounce Universe or collide with obstacles!
 
