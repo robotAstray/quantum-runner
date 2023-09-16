@@ -107,10 +107,6 @@ public class PlayerController : MonoBehaviour
             _score += 1;
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("CollapseSite"))
-        {
-            GameManager.Instance.CollapseRunner(_id);
-        }
         else if (collision.gameObject.CompareTag("Player"))
         {
             var pc = collision.gameObject.GetComponent<PlayerController>();
@@ -120,10 +116,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Coin"))
+        if (other.CompareTag("CollapseSite"))
         {
-            _score += 1;
-            Destroy(other.gameObject);
+            GameManager.Instance.CollapseRunner(_id);
         }
     }
 
