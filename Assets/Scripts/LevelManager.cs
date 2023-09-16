@@ -41,6 +41,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<float> weights;   
 
     private float timer = 0f;   // for periodic instantiation
+    private bool canSpawn = true;
 
     private void Start()
     {
@@ -57,36 +58,52 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        // spawn new object if enough time passed
-        if (timer <= 0)
+        if (canSpawn)
         {
-            int index = objects.Count - 1;
-            var randVal = Random.Range(0, weights.Sum());
-            float curWeight = 0;
-            for (int i = 0; i < weights.Count; i++)
+            timer -= Time.deltaTime;
+            // spawn new object if enough time passed
+            if (timer <= 0)
             {
-                curWeight += weights[i];
-                if (curWeight > randVal)
-                {
-                    index = i;
-                    break;
-                }
+                Spawn();
+                // decide how long to wait until next object is spawned
+                timer = Random.Range(ParameterManager.Instance.minInterval, ParameterManager.Instance.maxInterval);
             }
-
-            var objWidth = Random.Range(widths[index].x, widths[index].y);
-            var objLength = Random.Range(lengths[index].x, lengths[index].y);
-            
-            // spawn it randomly on the provided plane
-            var posX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
-            // place it forward so not its middle but its end is at spawn position (to avoid spawning things into each other)
-            var pos = transform.position + Vector3.right * posX + Vector3.forward * objLength / 2;
-
-            var obj = Instantiate(objects[index], pos, Quaternion.identity);
-            obj.transform.localScale = new(objWidth, 1, objLength);
-
-            // decide how long to wait until next object is spawned
-            timer = Random.Range(ParameterManager.Instance.minInterval, ParameterManager.Instance.maxInterval);
         }
+    }
+
+    public void ActivateSpawning()
+    {
+        // this method will be called from LevelGenCollider.cs when the last spawned object exits the level manager
+        // (this is relevant for long objects like walls so we don't start spawning a new object into the previous one)
+        canSpawn = true;
+    }
+
+    private void Spawn()
+    {
+        int index = objects.Count - 1;
+        var randVal = Random.Range(0, weights.Sum());
+        float curWeight = 0;
+        for (int i = 0; i < weights.Count; i++)
+        {
+            curWeight += weights[i];
+            if (curWeight > randVal)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        var objWidth = Random.Range(widths[index].x, widths[index].y);
+        var objLength = Random.Range(lengths[index].x, lengths[index].y);
+            
+        // spawn it randomly on the provided plane
+        var posX = Random.Range(-spawnWidth / 2, spawnWidth / 2);
+        // place it forward so not its middle but its end is at spawn position (to avoid spawning things into each other)
+        var pos = transform.position + Vector3.right * posX + Vector3.forward * objLength / 2;
+
+        var obj = Instantiate(objects[index], pos, Quaternion.identity);
+        obj.transform.localScale = new(objWidth, 1, objLength);
+
+        canSpawn = false;
     }
 }

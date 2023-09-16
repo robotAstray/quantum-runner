@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
     private void Tunnel(Vector3 offset)
     {
         var runner = GameManager.Instance.SpawnRunner(transform.position + offset);
+        runner.GetComponent<PlayerController>().SetScore(_score);
         runner.GetComponentInParent<AudioSource>().Play();
     }
 
