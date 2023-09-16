@@ -36,9 +36,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject runnerPrefab;
     [SerializeField] private Vector3 startPos = Vector3.zero;
     [SerializeField] private GameObject camera;
-    [SerializeField] private Vector3 cameraOffset = Vector3.zero;
     [SerializeField] private GameObject scoreUI;
 
+    private Vector3 cameraOffset;
     private Dictionary<int, GameObject> runnerDict = new();
     private int nextId = 0;
     private int score = 0;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraOffset = camera.transform.position;
         SpawnRunner(startPos);
         scoreText = scoreUI.GetComponent<TMP_Text>();
     }
