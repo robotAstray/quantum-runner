@@ -22,7 +22,7 @@ Your goal is to collect as many coin as possible, the more runners you have the 
 
 - **Quantum Tunneling**: In this game we tried to describe the behaviour of quantum tunnelling thorugh a barrier. When the character belongings encounter the barrier during the game some pieces may go thorugh some pieces might not. The player can choose to go back to gather the lost pieces using the resources collected on the other side of the barrier or continue running.
   
-- **Multiple Runners**: After `3` splits you would have up to `8` runners (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
+- **Multiple Runners**: After 3 splits we should have 4 runnersyou (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
   
 - **Resource Management**:  [what can we say here?]
   
