@@ -5,7 +5,7 @@ obj
 Packages
 ProjectSettings
 UserSettings
-Build
+Build*
 Temp
 *.sln
 

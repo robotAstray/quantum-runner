@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -118,7 +119,9 @@ public class GameManager : MonoBehaviour
 
     public void CollapseRunner(int id)
     {
-        foreach (var key in runnerDict.Keys)
+        var keys = new int[runnerDict.Count];
+        runnerDict.Keys.CopyTo(keys, 0);
+        foreach (var key in keys)
         {
             if (key != id) DestroyRunner(key);
         }
