@@ -5,8 +5,11 @@ obj
 Packages
 ProjectSettings
 UserSettings
+Build
+Temp
 *.meta
 *.sln
 
 Assembly-CSharp.csproj
 Assembly-CSharp-Editor.csproj
+Build.zip
