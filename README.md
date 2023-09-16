@@ -1,4 +1,4 @@
-**Tunnel Bounce**
+# Tunnel Bounce: Quantum Runner's Challenge
 
 This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-game-jam-2023).
 
