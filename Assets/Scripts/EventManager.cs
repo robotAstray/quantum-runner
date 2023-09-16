@@ -34,7 +34,6 @@ public class EventManager : MonoBehaviour
         {
             if (onScoreUpdateListener != null)
             {
-                print("Update score");
                 onScoreUpdateListener(newScore, scoreId);
             }
         }
