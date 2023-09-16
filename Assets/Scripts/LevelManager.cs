@@ -34,6 +34,9 @@ public class LevelManager : MonoBehaviour
     }
 
     [SerializeField] private float spawnWidth = 1;
+    [SerializeField] private float minInterval = 1;
+    [SerializeField] private float maxInterval = 3;
+    
     // all the game objects that can be spawned and their properties
     [SerializeField] private List<GameObject> objects;
     [SerializeField] private List<Vector2> widths;
@@ -66,7 +69,7 @@ public class LevelManager : MonoBehaviour
             {
                 Spawn();
                 // decide how long to wait until next object is spawned
-                timer = Random.Range(ParameterManager.Instance.minInterval, ParameterManager.Instance.maxInterval);
+                timer = Random.Range(minInterval, maxInterval);
             }
         }
     }
