@@ -1,10 +1,10 @@
-# Tunnel Bounce: Quantum Runner's Challenge
+# Quantum Runner
 
 This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-game-jam-2023).
 
-Tunnel Bounce is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way.
+Quantum Runner is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way.
 
-Tunnel Bounce is about balancing survival and prosperity in a quantum setting.
+Quantum Runner is about balancing survival and prosperity in a quantum setting.
 
 **Survival:** In this world, there are obstacles that could potentially be fatal for the runners. To increase your chances of survival, it's helpful to employ quantum coherence to create as many copies of runners as possible. This way, even if some copies are lost, others will continue to thrive.
 
@@ -12,7 +12,7 @@ Tunnel Bounce is about balancing survival and prosperity in a quantum setting.
 
 ## Concept
 
-**Tunnel Bounce** is based on the concept of quantum tunneling and offers a distinctive gameplay experience in which the player starts with a single runner in a never-ending level. As the runner encounters hurdles sideways, it splits into multiple runners, each of which takes a different path.
+**Quantum Runner** is based on the concept of quantum tunneling and offers a distinctive gameplay experience in which the player starts with a single runner in a never-ending level. As the runner encounters hurdles sideways, it splits into multiple runners, each of which takes a different path.
 
 **Tunneling Outcome:** Your particle tunnels through splits and reappears on the other side.
 
@@ -38,13 +38,13 @@ Your goal is to collect as many coins as possible. The more runners you have, th
 
 - Make the right decision when encountering quantum barriers and electric fields.
 
-- Use keys to change lanes and navigate safely in the Tunnel Bounce Universe.
+- Use keys to change lanes and navigate safely in the Quantum Runner's Universe.
 
 - Monitor collapse sites and aim to control the runner with the most resources to reach them first.
 
 ## Soundtrack Accreditation
 
-*The soundtrack for *Tunnel Bounce* includes both Dynamic and Non-Dynamic Sounds.*
+*The soundtrack for *Quantum Runner* includes both Dynamic and Non-Dynamic Sounds.*
 
 - **Non-Dynamic Sound:** The track "One Minute Countdown" by V.V. Campos was used as the Non-Dynamical Sound in the game.
 
