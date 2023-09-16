@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour
     private Vector3 cameraOffset;
     private Dictionary<int, GameObject> runnerDict = new();
     private int nextId = 0;
-    private int score = 0;
-    private TMPro.TMP_Text scoreText;
+    private int maxScore = 0;
+    private int maxScoreId = -1;
+    private TMP_Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
         cameraOffset = camera.transform.position;
         SpawnRunner(startPos);
         scoreText = scoreUI.GetComponent<TMP_Text>();
+
+        EventManager.Instance.onScoreUpdateListener += UpdateScore;
     }
 
     // Update is called once per frame
@@ -72,25 +75,22 @@ public class GameManager : MonoBehaviour
             middleZ /= runnerDict.Count;
 
             camera.transform.position = cameraOffset + new Vector3(middleX, 0, middleZ);
-            
-            // compute max score
-            score = 0;
-            foreach (var val in runnerDict.Values)
-            {
-                var pc = val.GetComponent<PlayerController>();
-                if (score < pc.GetScore())
-                {
-                    score = pc.GetScore();
-                }
-            }
-            scoreText.text = score.ToString();
         }
-        
     }
 
     private void Init()
     {
         // nothing to do currently
+    }
+
+    private void UpdateScore(int newScore, int scoreId)
+    {
+        if (newScore > maxScore)
+        {
+            maxScore = newScore;
+            scoreText.text = maxScore.ToString();
+            maxScoreId = scoreId;   
+        }
     }
 
     public GameObject SpawnRunner(Vector3 position)
@@ -99,7 +99,9 @@ public class GameManager : MonoBehaviour
         var pc = runner.GetComponent<PlayerController>();
         pc.SetId(nextId);
         nextId++;       // todo potential bug if we would run out of IDs (integer overflow)
-
+        
+        EventManager.Instance.TriggerEvent(EventManager.RUNNER_SPAWNED);
+        
         runnerDict[pc.GetId()] = runner;
         return runner;
     }
@@ -108,6 +110,27 @@ public class GameManager : MonoBehaviour
     {
         var runner = runnerDict[id];
         runnerDict.Remove(id);
+        
+        // check if we need to update the score
+        if (id == maxScoreId)
+        {
+            // compute new max score since potentially
+            int score = 0;
+            int scoreId = 0;
+            foreach (var val in runnerDict.Values)
+            {
+                var pc = val.GetComponent<PlayerController>();
+                if (score < pc.GetScore())
+                {
+                    score = pc.GetScore();
+                    scoreId = pc.GetId();
+                }
+            }
+
+            maxScore = -1;  // reset its value so we can overwrite it
+            UpdateScore(score, scoreId);
+        }
+        
         Destroy(runner);
 
         if (runnerDict.Count <= 0)
@@ -115,6 +138,8 @@ public class GameManager : MonoBehaviour
             print("GAME OVER");
             SpawnRunner(startPos);
         }
+
+        EventManager.Instance.TriggerEvent(EventManager.RUNNER_DIED);
     }
 
     public void CollapseRunner(int id)
@@ -125,6 +150,8 @@ public class GameManager : MonoBehaviour
         {
             if (key != id) DestroyRunner(key);
         }
+        
+        EventManager.Instance.TriggerEvent(EventManager.COLLAPSE);
     }
 
     public void FuseRunner(int id1, int id2)

@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Coin"))
         {
-            _score += 1;
+            PickedUpCoin();
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Player"))
@@ -120,6 +120,12 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.CollapseRunner(_id);
         }
+    }
+
+    private void PickedUpCoin()
+    {
+        _score += 1;
+        EventManager.Instance.TriggerScoreUpdate(_score, _id);
     }
 
     private void Tunnel(Vector3 offset)
