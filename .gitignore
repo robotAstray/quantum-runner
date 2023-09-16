@@ -7,7 +7,6 @@ ProjectSettings
 UserSettings
 Build
 Temp
-*.meta
 *.sln
 
 Assembly-CSharp.csproj

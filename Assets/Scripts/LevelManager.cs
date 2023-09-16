@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
@@ -31,10 +32,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // all the game objects that can be spawned
-    [SerializeField] private GameObject obstacle;
-    [SerializeField] private GameObject splitWall;
-    [SerializeField] private GameObject coin;
+    // all the game objects that can be spawned and their properties
+    [SerializeField] private List<GameObject> objects;
+    [SerializeField] private List<Vector2> widths;
+    [SerializeField] private List<Vector2> lengths;
+    [SerializeField] private List<float> chances;   
 
     private float timer = 0f;   // for periodic instantiation
     private float planeWidth = 0f;
@@ -56,29 +58,24 @@ public class LevelManager : MonoBehaviour
         // spawn new object if enough time passed
         if (timer <= 0)
         {
-            var posX = Random.Range(-planeWidth / 2, planeWidth / 2);
-            // add a small forward offset so it looks like they're coming through the horizon
-            var pos = transform.position + Vector3.right * posX + Vector3.forward * 2;
-
+            int index;
             var randVal = Random.value;
-            if (randVal < ParameterManager.Instance.obstacleChance)
+            for (index = 0; index < chances.Count && randVal > 0; index++)
             {
-                Instantiate(obstacle, pos, Quaternion.identity);
+                randVal -= chances[index];
             }
-            else if (randVal < ParameterManager.Instance.obstacleChance + ParameterManager.Instance.coinChance)
-            {
-                Instantiate(coin, pos, Quaternion.identity);
-            }
-            else
-            {
-                var obj = Instantiate(splitWall, pos, Quaternion.identity);
-                var wallWidth = Random.Range(ParameterManager.Instance.minWallWidth,
-                    ParameterManager.Instance.maxWallWidth);
-                var wallLength = Random.Range(ParameterManager.Instance.minWallLength,
-                    ParameterManager.Instance.minWallLength);
-                obj.transform.localScale = new(wallWidth, 1, wallLength);
-            }
+
+            var objWidth = Random.Range(widths[index].x, widths[index].y);
+            var objLength = Random.Range(lengths[index].x, lengths[index].y);
             
+            // spawn it randomly on the provided plane
+            var posX = Random.Range(-planeWidth / 2, planeWidth / 2);
+            // place it forward so not its middle but its end is at spawn position (to avoid spawning things into each other)
+            var pos = transform.position + Vector3.right * posX + Vector3.forward * objLength / 2;
+
+            var obj = Instantiate(objects[index], pos, Quaternion.identity);
+            obj.transform.localScale = new(objWidth, 1, objLength);
+
             // decide how long to wait until next object is spawned
             timer = Random.Range(ParameterManager.Instance.minInterval, ParameterManager.Instance.maxInterval);
         }

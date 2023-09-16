@@ -300,6 +300,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
+      propertyPath: chances.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3150730449096756911, guid: c8b4f81d2a4dc144695bef024eed4167,
         type: 3}
       propertyPath: m_Name

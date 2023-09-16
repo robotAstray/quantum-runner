@@ -142,8 +142,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e39d222cbce459eb7d7e5c3a11eca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 3167688520294061526, guid: 8ec341d97a5eafa4eace75730e5448a7,
-    type: 3}
-  splitWall: {fileID: 6273832144691248119, guid: 806aa7e0c218b9942b4fb9704684265b,
-    type: 3}
-  coin: {fileID: 3603707159255231564, guid: 11490997968dfd14c8e2b96b11295de3, type: 3}
+  objects:
+  - {fileID: 3603707159255231564, guid: 11490997968dfd14c8e2b96b11295de3, type: 3}
+  - {fileID: 3167688520294061526, guid: 8ec341d97a5eafa4eace75730e5448a7, type: 3}
+  - {fileID: 889417440811647229, guid: ad5cb9ecc150d07468446f9016536bb3, type: 3}
+  - {fileID: 6273832144691248119, guid: 806aa7e0c218b9942b4fb9704684265b, type: 3}
+  widths:
+  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 2}
+  - {x: 3, y: 7}
+  lengths:
+  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 2}
+  - {x: 15, y: 30}
+  chances:
+  - 0.25
+  - 0.45
+  - 0.1
+  - 1

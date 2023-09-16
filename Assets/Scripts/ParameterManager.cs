@@ -40,14 +40,6 @@ public class ParameterManager : MonoBehaviour
     // intervals for spawning new objects
     [SerializeField] public float minInterval = 3f;
     [SerializeField] public float maxInterval = 5;
-    // chances for which object to spawn (remainder is SplitWall)
-    [SerializeField] public float obstacleChance = 0.3f;
-    [SerializeField] public float coinChance = 0.55f;
-    // wall sizes
-    [SerializeField] public float minWallLength = 5f;
-    [SerializeField] public float maxWallLength = 20f;
-    [SerializeField] public float minWallWidth = 2f;
-    [SerializeField] public float maxWallWidth = 5f;
 
     [Header("Split Walls")] 
     [SerializeField] public float splitCooldown = 5f;   // how long to wait until one wall can cause a new split
