@@ -2,10 +2,13 @@
 
 This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-game-jam-2023).
 
-Tunnel Bounce is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way. In this game, you will control a single character. 
+Tunnel Bounce is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way.
 
-Upon encountering obstacles, can either tunnel through them or bounce off them. You can think of the characters as atom that can loose electrons, Neutrons or Protons when encountering certain barriers. 
-Your goal is to gather resources, navigate various barriers, and reach your destination while making strategic decisions about your characters. The runners are particles which are represented by spherical objects. And if the runner hits a red cylinder it dies.
+Tunnel Bounce is about balancing survival and prosperity in a quantum setting.
+
+Survival: In this world, there are obstacles that could potentially be fatal for the runners. To increase your chances of survival, it's helpful to employ quantum coherence to create as many copies of runners as possible. This way, even if some copies are lost, others will continue to thrive.
+
+Prosperity: There are coins to be collected. In the event of a quantum collapse, only one runner and its coins will remain, while all other runners and their fortunes will be lost. Therefore, it's useful not to create an excessive number of copies, allowing you to maintain focus on the runners whose total fortunes is worth more.
 
 ## Concept
 
