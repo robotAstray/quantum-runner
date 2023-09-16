@@ -25,8 +25,6 @@ Your goal is to collect as many coin as possible, the more runners you have the 
   
 - **Resource Management**:  [what can we say here?]
   
-- **EM Fields**:Some regions in the Tunnel Bounce universe have electromagnetic fields which would allow only certain parts [we need to specify which parts] to pass through. Just like uncharged particle would pass through in a barrier where a EM field is present. As a consequence the player must choose wisely.
-  
 - **Collapse Sites**: This is a special location in the Tunnel Bounce universe. When the runner gets there all the other runners are lost. Therefore the player should try to control the runner with the most resources and coins so that the runner reaches the collapsed site first.
   
 - **Tunnel Bounce Universe**: The Tunnel Bounce world conceptually looks like a cylinder, where distinct lanes are regions. You can pick up keys to change lane.
