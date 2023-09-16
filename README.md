@@ -11,7 +11,7 @@ Your goal is to gather resources, navigate various barriers, and reach your dest
 
 Tunne bounce is based on the concept of quantum tunnelling and it offer a distinctive gameplay experience in which the player starts with a single character in a neverending level. As the character encounter hurdles, it can split into multiple runers each of which may take a different path.
 
-**Tunneling Outcome:** Your character tunnels through the obstacle and reappears on the other side.
+**Tunneling Outcome:** Your particle tunnels through splits and reappear on the other side.
 
 Your goal is to collect as many coin as possible, the more runners you have the more coins you can collect and the harser it is for them to avoid obstacles.
 
