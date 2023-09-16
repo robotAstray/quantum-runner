@@ -1,5 +1,10 @@
 # Quantum Runner
 
+## Disclaimer
+
+**Disclaimer:** **Quantum Runner is a fictional video game that creatively represents quantum physics and tunneling phenomena for gameplay purposes. Regarding tunneling, we focus on the aspect that hitting a barrier generates a tunneling through component and a bouncing back component, but do not model the amplitudes for the components. This creative representation is used solely for gameplay and entertainment purposes and does not aim to provide an accurate representation of real-world quantum physics.**
+
+
 This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-game-jam-2023).
 
 Quantum Runner is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way.
