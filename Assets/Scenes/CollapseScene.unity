@@ -302,6 +302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
         type: 3}
+      propertyPath: weights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
       propertyPath: chances.Array.data[0]
       value: 0.15
       objectReference: {fileID: 0}
@@ -314,6 +319,26 @@ PrefabInstance:
         type: 3}
       propertyPath: chances.Array.data[2]
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
+      propertyPath: weights.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
+      propertyPath: weights.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
+      propertyPath: weights.Array.data[2]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
+        type: 3}
+      propertyPath: weights.Array.data[3]
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3150730449096756905, guid: c8b4f81d2a4dc144695bef024eed4167,
         type: 3}

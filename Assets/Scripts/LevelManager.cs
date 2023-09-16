@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -36,7 +37,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> objects;
     [SerializeField] private List<Vector2> widths;
     [SerializeField] private List<Vector2> lengths;
-    [SerializeField] private List<float> chances;   
+    [SerializeField] private List<float> weights;   
 
     private float timer = 0f;   // for periodic instantiation
     private float planeWidth = 0f;
@@ -45,6 +46,11 @@ public class LevelManager : MonoBehaviour
     {
         // maybe don't use full width so nothing spawns directly at the border?
         planeWidth = 50;     // todo fix magic number
+
+        if (objects.Count != widths.Count || objects.Count != lengths.Count || objects.Count != weights.Count)
+        {
+            print("Parameter lists have different sizes!");
+        }
     }
 
     private void Init()
@@ -58,11 +64,17 @@ public class LevelManager : MonoBehaviour
         // spawn new object if enough time passed
         if (timer <= 0)
         {
-            int index;
-            var randVal = Random.value;
-            for (index = 0; index < chances.Count && randVal > 0; index++)
+            int index = objects.Count - 1;
+            var randVal = Random.Range(0, weights.Sum());
+            float curWeight = 0;
+            for (int i = 0; i < weights.Count; i++)
             {
-                randVal -= chances[index];
+                curWeight += weights[i];
+                if (curWeight > randVal)
+                {
+                    index = i;
+                    break;
+                }
             }
 
             var objWidth = Random.Range(widths[index].x, widths[index].y);
