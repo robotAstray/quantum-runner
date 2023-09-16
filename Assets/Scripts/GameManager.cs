@@ -59,23 +59,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Update camera movement
-        if (runnerDict.Count > 0)
-        {
-            // first find out the middle of all runners     // todo can be optimized since the relative middle only changes when someone dies or spawns?
-            var middleX = 0f;
-            var middleZ = 0f;
-            foreach (var val in runnerDict.Values)
-            {
-                var position = val.transform.position;
-                middleX += position.x;
-                middleZ += position.z;    // although I guess z-coordinate should be the same for everyone   
-            }
-            middleX /= runnerDict.Count;
-            middleZ /= runnerDict.Count;
-
-            camera.transform.position = cameraOffset + new Vector3(middleX, 0, middleZ);
-        }
+        
     }
 
     private void Init()
