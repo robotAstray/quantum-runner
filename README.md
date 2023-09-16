@@ -26,7 +26,7 @@ Your goal is to collect as many coin as possible, the more runners you have the 
   
 - **Resource Management**:  [what can we say here?]
   
-- **Collapse Sites**: This is a special location in the Tunnel Bounce universe. When the runner gets there all the other runners are lost. Therefore the player should try to control the runner with the most resources and coins so that the runner reaches the collapsed site first.
+- **Collapse Sites**: Collapse Sites are special locations that disrupt the quantum superpositions. When a single runner reaches this site, all other runners vanish, taking with them the coins and resources they've gathered. Keep an eye out for Collapse Sites and aim to send your most prosperous runner to maximize your gains!
   
 - **Tunnel Bounce Universe**: The Tunnel Bounce world conceptually looks like a cylinder, where distinct lanes are regions. You can pick up keys to change lane.
   
