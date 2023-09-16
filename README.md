@@ -20,7 +20,7 @@ Your goal is to collect as many coin as possible, the more runners you have the 
 
 ## Key Features
 
-- **Quantum Tunneling**: In this game we tried to describe the behaviour of quantum tunnelling thorugh a barrier. When the character belongings encounter the barrier during the game some pieces may go thorugh some pieces might not. The player can choose to go back to gather the lost pieces using the resources collected on the other side of the barrier or continue running.
+- **Quantum Tunneling:** The game enables players to enter a quantum superposition state through quantum tunneling. Each time the character encounters a tunneling barrier, it creates a new copy of itself on the other side of the barrier. The original character and its copies exist in a coherent superposition until a quantum collapse occurs.
   
 - **Multiple Runners**: After 3 splits we should have 4 runnersyou (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
   
