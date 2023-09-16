@@ -52,6 +52,8 @@ public class LevelManager : MonoBehaviour
         {
             print("Parameter lists have different sizes!");
         }
+        
+        timer = Random.Range(minInterval, maxInterval);
     }
 
     private void Init()
