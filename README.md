@@ -1,1 +1,32 @@
-# tunnel-bounce
+# Tunnel Bounce
+
+This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-game-jam-2023).
+
+Tunnel Bounce is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way. In this game, you will control a single character. 
+
+Upon encountering obstacles, can either tunnel through them or bounce off them. You can think of the characters as atom that can loose electrons, Neutrons or Protons when encountering certain barriers. 
+Your goal is to gather resources, navigate various barriers, and reach your destination while making strategic decisions about your characters.
+
+## Concept
+
+Tunne bounce is based on the concept of quantum tunnelling and it offer a distinctive gameplay experience in which the player starts with a single character in a neverending level. As the character encounter hurdles, it can split into multiple runers each of which may take a different path.
+
+**Tunneling Outcome:** Your character tunnels through the obstacle and reappears on the other side.
+
+**Tunneling Path:** Your character bounces off the obstacle, changing direction.
+
+Your goal is to collect as many coin as possible, the more runners you have the more coins you can collect and the harser it is for them to avoid obstacles.
+
+## Key Features
+
+- **Quantum Tunneling**: In this game we tried to describe the behaviour of quantum tunnelling thorugh a barrier. When the character belongings encounter the barrier during the game some pieces may go thorugh some pieces might not. The player can choose to go back to gather the lost pieces using the resources collected on the other side of the barrier or continue running.
+- **Multiple Runners**: After `3` splits you would have up to `8` runners (or fewer depending on the choices made by the player during the game). The more runners you have the more coins you can collect and the harder it is to manage the runners.
+- **Resource Management**:  [what can we say here?]
+- **EM Fields**:Some regions in the Tunnel Bounce universe have electromagnetic fields which would allow only certain parts [we need to specify which parts] to pass through. Just like uncharged particle would pass through in a barrier where a EM field is present. As a consequence the player must choose wisely.
+- **Collapse Sites**: This is a special location in the Tunnel Bounce universe. When the runner gets there all the other runners are lost. Therefore the player should try to control the runner with the most resources and coins so that the runner reaches the collapsed site first.
+- **Tunnel Bounce Universe**: The Tunnel Bounce world conceptually looks like a cylinder, where distinct lanes are regions. You can pick up keys to change lane.
+- **Control Method**: All runners are controlled using a single left and a single right key, keeping the gameplay easily accessible.
+
+
+
+
