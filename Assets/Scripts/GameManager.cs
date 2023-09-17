@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
         {
             gameOver.SetActive(true);
             isGameOver = true;
+            ParameterManager.Instance.Reset();
             respawnTimer = 3f;
         }
 

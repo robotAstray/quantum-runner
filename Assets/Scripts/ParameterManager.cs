@@ -43,14 +43,26 @@ public class ParameterManager : MonoBehaviour
 
     [Header("Split Walls")] 
     [SerializeField] public float splitCooldown = 5f;   // how long to wait until one wall can cause a new split
+
+    private float initialForwardSpeed = 0;
     
     private void Init()
     {
         // currently nothing to do
     }
 
+    private void Start()
+    {
+        initialForwardSpeed = forwardSpeed;
+    }
+
     private void Update()
     {
         forwardSpeed += Time.deltaTime * acceleration;
+    }
+
+    public void Reset()
+    {
+        forwardSpeed = initialForwardSpeed;
     }
 }
