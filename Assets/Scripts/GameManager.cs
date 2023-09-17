@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject scoreUI;
 
     [SerializeField] private GameObject highScoreUI;
+    [SerializeField] private GameObject gameOver;
+    [SerializeField] private TMP_Text gameOverTimer;
 
     private Vector3 cameraOffset;
     private Dictionary<int, GameObject> runnerDict = new();
@@ -49,10 +51,16 @@ public class GameManager : MonoBehaviour
 
     private int highScore = 0;
     private TMP_Text highScoreText;
+
+    private float respawnTimer = 3f;
+    private bool isGameOver = false;
     
     // Start is called before the first frame update
     void Start()
     {
+        gameOver.SetActive(false);
+        gameOverTimer = gameOver.transform.Find("Timer").GetComponent<TMP_Text>();
+        
         cameraOffset = cameraObj.transform.position;
         SpawnRunner(startPos);
         scoreText = scoreUI.GetComponent<TMP_Text>();
@@ -65,7 +73,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isGameOver)
+        {
+            respawnTimer -= Time.deltaTime;
+            if (respawnTimer <= 0)
+            {
+                isGameOver = false;
+                gameOver.SetActive(false);
+                SpawnRunner(startPos, thaw: true);
+            }
+            else
+            {
+                gameOverTimer.text = ((int)respawnTimer + 1).ToString(); 
+            }
+        }
     }
 
     private void Init()
@@ -90,12 +111,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameObject SpawnRunner(Vector3 position)
+    public GameObject SpawnRunner(Vector3 position, bool thaw = false)
     {
         var runner = Instantiate(runnerPrefab, position, Quaternion.identity);
         var pc = runner.GetComponent<PlayerController>();
         pc.SetId(nextId);
         nextId++;       // todo potential bug if we would run out of IDs (integer overflow)
+        
+        if (thaw) pc.Unfreeze();
         
         EventManager.Instance.TriggerEvent(EventManager.RUNNER_SPAWNED);
         
@@ -132,8 +155,9 @@ public class GameManager : MonoBehaviour
 
         if (runnerDict.Count <= 0)
         {
-            print("GAME OVER");
-            SpawnRunner(startPos);
+            gameOver.SetActive(true);
+            isGameOver = true;
+            respawnTimer = 3f;
         }
 
         EventManager.Instance.TriggerEvent(EventManager.RUNNER_DIED);

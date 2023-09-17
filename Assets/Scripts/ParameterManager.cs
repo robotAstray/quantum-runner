@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ParameterManager : MonoBehaviour
@@ -28,7 +29,8 @@ public class ParameterManager : MonoBehaviour
         }
     }
 
-    [Header("Player")]
+    [Header("Player")] 
+    [SerializeField] public float acceleration = 0.01f;
     [SerializeField] public float forwardSpeed = 7f;    // how fast objects move towards the player
     [SerializeField] public float sideSpeed = 5f;       // how fast the player can move sideways
     [SerializeField] public float freezePeriod = 3f;    // how long a new runner is frozen
@@ -45,5 +47,10 @@ public class ParameterManager : MonoBehaviour
     private void Init()
     {
         // currently nothing to do
+    }
+
+    private void Update()
+    {
+        forwardSpeed += Time.deltaTime * acceleration;
     }
 }

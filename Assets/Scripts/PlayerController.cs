@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.DestroyRunner(_id);
     }
 
-    private void Unfreeze()
+    public void Unfreeze()
     {
         _isFrozen = false;
         _freezeTimer = 0f;
