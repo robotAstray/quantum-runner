@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject camera;
     [SerializeField] private GameObject scoreUI;
 
+    [SerializeField] private GameObject highScoreUI;
+
     private Vector3 cameraOffset;
     private Dictionary<int, GameObject> runnerDict = new();
     private int nextId = 0;
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour
     private int maxScoreId = -1;
     private TMP_Text scoreText;
 
+    private int highScore = 0;
+    private TMP_Text highScoreText;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +58,8 @@ public class GameManager : MonoBehaviour
         SpawnRunner(startPos);
         scoreText = scoreUI.GetComponent<TMP_Text>();
 
+        highScoreText = highScoreUI.GetComponent<TMP_Text>();
+        
         EventManager.Instance.onScoreUpdateListener += UpdateScore;
     }
 
@@ -74,6 +81,13 @@ public class GameManager : MonoBehaviour
             maxScore = newScore;
             scoreText.text = maxScore.ToString();
             maxScoreId = scoreId;   
+        }
+
+        // keep track of high score
+        if (maxScore > highScore)
+        {
+            highScore = maxScore;
+            highScoreText.text = highScore.ToString();
         }
     }
 
