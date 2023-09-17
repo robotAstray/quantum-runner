@@ -207,7 +207,7 @@ MonoBehaviour:
   acceleration: 0.1
   forwardSpeed: 16
   sideSpeed: 10
-  freezePeriod: 1.5
+  freezePeriod: 0.7
   bounceMult: 0
   minInterval: 0.2
   maxInterval: 3
