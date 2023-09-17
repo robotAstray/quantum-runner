@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,7 +12,14 @@ public class PlayerController : MonoBehaviour
     private float _freezeTimer = 0f;
     private int _score = 0;         // local score of a runner
     private Vector3 _modelSize;
-    
+    private ParticleSystem _particleSystem;
+
+    private void Awake()
+    {
+        _particleSystem = transform.Find("Model").GetComponent<ParticleSystem>();
+        print(_particleSystem);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -149,5 +157,6 @@ public class PlayerController : MonoBehaviour
     {
         _isFrozen = false;
         _freezeTimer = 0f;
+        _particleSystem.Play();
     }
 }
