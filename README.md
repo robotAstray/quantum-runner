@@ -40,6 +40,10 @@ Your goal is to collect as many coins as possible. The more runners you have, th
 
 - **Collapse Sites:** Collapse Sites are special locations that disrupt the quantum superpositions. When a single runner reaches this site, all other runners vanish, taking with them the coins and resources they've gathered. Keep an eye out for Collapse Sites and aim to send your most prosperous runner to maximize your gains!
 
+<p align="center">
+  <img src="https://github.com/robotAstray/quantum-runner/blob/cbbb602712436bb0d5de47300fb43b43e66d53a2/images/qgj_5.png" alt="Runners Score">
+</p>
+
 - **Runner Elimination:** Runners face two critical conditions that can lead to their elimination. The first is collision with the cylindrical red barriers that populate the game world. Colliding with these obstacles can be fatal, so keen spatial awareness and precise timing are essential for survival. The second condition for elimination is not reaching the Collapse Site first when it appears. In this quantum adventure, only the leading runner and their collected coins and resources are spared when the Collapse Site activates.
 
 <p align="center">
