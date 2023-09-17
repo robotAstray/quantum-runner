@@ -204,10 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bfc6ad64d4f014ba877d80fb12e77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 4.78
+  acceleration: 0.1
   forwardSpeed: 16
   sideSpeed: 10
-  freezePeriod: 2
+  freezePeriod: 1.5
   bounceMult: 0
   minInterval: 0.2
   maxInterval: 3
