@@ -9,7 +9,7 @@ This game was created during [Quantum Game Jam 23](https://itch.io/jam/quantum-g
 
 
 
-https://github.com/robotAstray/quantum-runner/assets/62884362/704adbe9-4128-4b66-84c4-2a6c297e1294
+https://github.com/robotAstray/quantum-runner/assets/62884362/e59d13a3-a54b-442f-ae09-e99e42f6e492
 
 
 Quantum Runner is an endless runner game that combines the notable platform game subgenre with the challenge of managing multiple characters in a unique way.
