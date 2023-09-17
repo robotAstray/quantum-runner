@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private GameObject runnerPrefab;
     [SerializeField] private Vector3 startPos = Vector3.zero;
-    [SerializeField] private GameObject camera;
+    [FormerlySerializedAs("camera")] [SerializeField] private GameObject cameraObj;
     [SerializeField] private GameObject scoreUI;
 
     [SerializeField] private GameObject highScoreUI;
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraOffset = camera.transform.position;
+        cameraOffset = cameraObj.transform.position;
         SpawnRunner(startPos);
         scoreText = scoreUI.GetComponent<TMP_Text>();
 
