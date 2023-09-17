@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1802837, g: 0.22571404, b: 0.30692273, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,12 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &120076070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2696977931534479888, guid: adb694ce563a6694aa2df6ec837ec8dc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2696977931932086086}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269303638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1044,7 @@ Transform:
   - {fileID: 1002209163}
   - {fileID: 269303639}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1420606464
 PrefabInstance:
@@ -1290,20 +1284,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 587819022460704079, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_text
-      value: High Score
-      objectReference: {fileID: 0}
-    - target: {fileID: 587819022460704079, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2696977931417531393, guid: adb694ce563a6694aa2df6ec837ec8dc,
         type: 3}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696977931417531404, guid: adb694ce563a6694aa2df6ec837ec8dc,
+        type: 3}
+      propertyPath: acceleration
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2696977931417531404, guid: adb694ce563a6694aa2df6ec837ec8dc,
         type: 3}
@@ -1315,20 +1304,10 @@ PrefabInstance:
       propertyPath: freezePeriod
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2696977931417531406, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: scoreUI
-      value: 
-      objectReference: {fileID: 120076070}
-    - target: {fileID: 2696977931417531406, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: highScoreUI
-      value: 
-      objectReference: {fileID: 2696977931932086087}
     - target: {fileID: 2696977931417531407, guid: adb694ce563a6694aa2df6ec837ec8dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2696977931417531407, guid: adb694ce563a6694aa2df6ec837ec8dc,
         type: 3}
@@ -1380,44 +1359,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2696977931534479902, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_text
-      value: Current Score
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696977931534479902, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884953589302254488, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884953589302254488, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884953589302254488, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884953589302254488, guid: adb694ce563a6694aa2df6ec837ec8dc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 62
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adb694ce563a6694aa2df6ec837ec8dc, type: 3}
---- !u!1 &2696977931932086087 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9029559034072847372, guid: adb694ce563a6694aa2df6ec837ec8dc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2696977931932086086}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3150730448481171060
 PrefabInstance:
   m_ObjectHideFlags: 0
