@@ -1,0 +1,14 @@
+.idea
+Library
+Logs
+obj
+Packages
+ProjectSettings
+UserSettings
+Build*
+Temp
+*.sln
+
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+Build.zip
